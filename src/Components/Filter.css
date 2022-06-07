@@ -1,0 +1,11 @@
+.filter {
+    margin: 1rem;
+}
+
+.filter-list {
+    list-style-type: none;
+}
+
+.filter-list label {
+    margin-left: 1rem;
+}

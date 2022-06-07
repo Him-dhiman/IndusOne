@@ -10,6 +10,7 @@ const ProblemList = (props) => {
 
     const allUnchecked = arr => arr.every(v => v === false);
 
+    //if all are unchecked treat it as all are checked
     if(allUnchecked(difficulty)) {
         difficulty = difficulty.map((item) => true)
     }
@@ -17,19 +18,15 @@ const ProblemList = (props) => {
         status = status.map((item) => true)
     }
 
-    var stat = ["Solved", "Unsolved"]
-    var diff = ["Easy", "Medium", "Difficult"]
-
-    diff = diff.map((item, index) => (difficulty[index])?item:null)
-    stat = stat.map((item, index) => (status[index])?item:null)
-
-    console.log(diff)
-    console.log(stat)
+    //store required attributes in array
+    var diff = props.filter1Attr.map((item, index) => (difficulty[index])?item:null)
+    var stat = props.filter2Attr.map((item, index) => (status[index])?item:null)
     
   return (
     <div className="ProblemList">
           { ProblemDetails.map((problem) =>
 
+            //print only if question matches with required atttributes
             (diff.includes(problem.difficulty) && stat.includes(problem.status))?
             <ProblemBox 
               name = {problem.name}
