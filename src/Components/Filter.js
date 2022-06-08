@@ -14,14 +14,14 @@ const Filter = (props) => {
 
   return (
     <div className="filter">
-        <h4>{props.filterType}</h4>
+        <h4 className="filter-name">{props.filterType}</h4>
         { 
           filterAttr.map((name, index) => {
 
             return (
               <ul className="filter-list">
                 <li key={index}>
-                  <div className="list-item">
+                  <div className="filter-list-item">
                       <input
                         type="checkbox"
                         id={`checkbox-${name}`}
