@@ -30,11 +30,20 @@
     font-weight: bold;
     background: var(--lightblue);
     border: 1px solid black;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 
 .solve-button button:hover {
     cursor: pointer;
-    box-shadow: 1px 1px 6px #000000;
     background: #22d6c7;
+}
+
+@media screen and (max-width: 768px) {
+    .ProblemBox {
+        flex-direction: column;
+    }
+    .problem-details {
+        margin-bottom: 1rem;
+        text-align: center;     
+    }
 }

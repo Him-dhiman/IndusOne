@@ -8,7 +8,7 @@ const Body = () => {
 
   const [status, setStatus] = useState([false,false])
   const [difficulty, setDifficulty] = useState([false,false,false])
-  const diffAttr = ["Easy", "Medium", "Difficult"]
+  const diffAttr = ["Easy", "Medium", "Hard"]
   const statAttr = ["Solved", "Unsolved"]
 
   return (

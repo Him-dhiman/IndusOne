@@ -7,7 +7,7 @@ const ProblemDetails = [
     },
     { 
       name: "Connected Components",
-      difficulty: "Difficult",
+      difficulty: "Hard",
       points: 70,
       status: "Solved"
     },
@@ -25,7 +25,7 @@ const ProblemDetails = [
     },
     { 
       name: "Shortest Path",
-      difficulty: "Difficult",
+      difficulty: "Hard",
       points: 100,
       status: "Unsolved"
     },
@@ -43,7 +43,7 @@ const ProblemDetails = [
     },
     {
       name: "Rainwater Trapping",
-      difficulty: "Difficult",
+      difficulty: "Hard",
       points: 100,
       status: "Unsolved",
     },  
