@@ -24,8 +24,13 @@
 .solve-button button {
     padding: 0.5rem 3rem 0.5rem 3rem;
     font-weight: bold;
+    background: var(--lightblue);
+    border: 1px solid black;
+    transition: 0.2s ease-in-out;
 }
 
 .solve-button button:hover {
     cursor: pointer;
+    box-shadow: 1px 1px 6px #000000;
+    background: #22d6c7;
 }

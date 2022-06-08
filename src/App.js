@@ -1,7 +1,7 @@
-import Body from './Components/Body.js'
+import Body from './components/Body.js'
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <>
       {/* <Header /> */}
