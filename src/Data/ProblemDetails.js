@@ -32,10 +32,33 @@ const ProblemDetails = [
     {
       name: "Count the Balloons",
       difficulty: "Medium",
-      points: 70,
+      points: 60,
       status: "Solved"
-    }
-  
+    },
+    {
+      name: "String Subsequences",
+      difficulty: "Medium",
+      points: 50,
+      status: "Unsolved"
+    },
+    {
+      name: "Rainwater Trapping",
+      difficulty: "Difficult",
+      points: 100,
+      status: "Unsolved",
+    },  
+    {
+      name: "String Concatenate",
+      difficulty: "Easy",
+      points: 30,
+      status: "Solved",
+    },
+    {
+      name: "Balanced Parantheses",
+      difficulty: "Medium",
+      points: 50,
+      status: "Unsolved"
+    }  
 ]
 
 export default ProblemDetails

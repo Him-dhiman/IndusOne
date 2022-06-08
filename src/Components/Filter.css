@@ -1,5 +1,9 @@
 .filter {
-    margin: 1rem;
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+.filter h4 {
+    margin-bottom: 0.5rem;
 }
 
 .filter-list {
