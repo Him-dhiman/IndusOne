@@ -1,4 +1,4 @@
-import Body from './components/Body.js'
+import Body from './Components/Body.js'
 import './App.css';
 
 const App = () => {
