@@ -16,8 +16,9 @@ const App = () => {
         <Routes>
         <Route exact path="/" element={<Body />} />          
         </Routes>
+        <Footer/>
       </Router>
-      <Footer/>
+      
     </>
   )
 }
