@@ -9,7 +9,7 @@
 
 .ProblemBox:hover {
     box-shadow: 1px 1px 6px #000000;
-
+    color: rgb(228, 228, 228);;
 }
 
 .problem-details h5 {
@@ -21,8 +21,7 @@
     font-size: 1.25rem;
 }
 
-.problem-difficulty,
-.problem-points {
+.problem-difficulty, .problem-points {
     font-size: 0.85rem;
 }
 
@@ -45,22 +44,15 @@
 
 .solve-button:hover {
     cursor: pointer;
-    background: #0F2027;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin: 0 0px;
+    background: #22d6c7;
 }
 
 @media screen and (max-width: 768px) {
     .ProblemBox {
         flex-direction: column;
     }
-
     .problem-details {
         margin-bottom: 1rem;
-        text-align: center;
+        text-align: center;     
     }
 }

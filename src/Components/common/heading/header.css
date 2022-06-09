@@ -1,106 +1,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 .head {
-  padding: 20px 0;
-  color: #fff;
-}
-
-.logo h1 {
-  font-size: 35px;
-  font-weight: 900;
-}
-
-.head .icon {
-  margin-left: 10px;
-}
-
-/*------------header------------*/
-header {
-  background: #0F2027;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  margin: 0 0px;
-
-}
-
-header .nav {
-  display: flex !important;
-}
-
-header li {
-  margin-right: 40px;
-}
-
-header ul {
-  padding: 40px 30px;
-}
-
-header ul li a {
-  color: #fff;
-  font-weight: 500;
-  transition: 0.5s;
-}
-
-.icon {
-  margin-left: 10px;
-}
-
-header ul li a:hover {
-  color: #1eb2a6;
-}
-
-.start {
-  background-color: #1eb2a6;
-  padding: 30px 70px;
-  color: #fff;
-  clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
-}
-
-.toggle {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .start {
-    clip-path: none;
+    padding: 20px 0;
+    background-color: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .logo h1 {
+    font-size: 35px;
+    font-weight: 900;
+    color: #fff;
+  }
+  .logo span{
+    color: white;
+  }
+  .head .icon {
+    margin-left: 10px;
   }
 
+  /*------------header------------*/
   header {
-    margin: 0;
-    background-color: #1eb2a6;
-    position: relative;
+    background-color: white;
+    margin: 0 0px;
+    
   }
-
-  header ul.flexSB {
+  header .nav {
+    display: flex !important;
+  }
+  header li {
+    margin-right: 40px;
+  }
+  header ul {
+    padding: 40px 30px;
+  }
+  header ul li a {
+    color: #000;
+    font-weight:500;
+    transition: 0.5s;    
+  }
+.icon{
+  margin-left: 10px;
+}
+  header ul li a:hover {
+    color: #1eb2a6;
+  }
+  .start {
+    background-color: #1eb2a6;
+    padding: 30px 70px;
+    color: #fff;
+    clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  .toggle {
     display: none;
   }
-
-  header ul li {
-    margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    .start {
+      clip-path: none;
+    }
+    header {
+      margin: 0;
+      background-color: #1eb2a6;
+      position: relative;
+    }
+    header ul.flexSB {
+      display: none;
+    }
+    header ul li {
+      margin-bottom: 20px;
+    }
+    .toggle {
+      display: block;
+      background: none;
+      color: #fff;
+      font-size: 30px;
+      position: absolute;
+      right: 30px;
+      top: -10px;
+    }
+    .mobile-nav {
+      position: absolute;
+      top: 11vh;
+      left: 0;
+      width: 100%;
+      background-color: #1eb2a6;
+    }
   }
-
-  .toggle {
-    display: block;
-    background: none;
-    color: #fff;
-    font-size: 30px;
-    position: absolute;
-    right: 30px;
-    top: -10px;
+  .dropdown-toggle::after {
+    display: none;
   }
-
-  .mobile-nav {
-    position: absolute;
-    top: 11vh;
-    left: 0;
-    width: 100%;
-    background-color: #1eb2a6;
-  }
-}
-
-.dropdown-toggle::after {
-  display: none;
-}
