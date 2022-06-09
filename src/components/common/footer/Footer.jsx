@@ -12,8 +12,8 @@ const Footer = () => {
             <span>Solving complex, strategic business challenges with cuttingedge technological innovations & fostering breakthrough in AI
 </span>
           </div>
-          <div className='right row'>
-            <input type='text' placeholder='Enter email address'/>
+          <div >
+         <input type='text' placeholder='Enter email address'/><i className='fa fa-paper-plane'></i>
           </div>
         </div>
       </section>
@@ -54,7 +54,7 @@ const Footer = () => {
             <ul>
               <li><i className='fa fa-map'></i>  Chandigarh, Punjab 140308, IN</li>
               <li><i className='fa fa-phone'></i> 123456</li>
-              <li><i className="fa fa-paper-plane"></i> Website</li>
+              <li><i className='fa fa-paper-plane'></i><Link to='/website'>Website</Link></li>
             </ul>
           </div>
         </div>
