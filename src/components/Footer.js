@@ -68,7 +68,7 @@ function Footer() {
               <i className="fa-solid fa-globe"></i>
             </Link>
           </div>
-          <small class='website-rights'>All Rights Reserved @2022</small>
+          <small class='website-rights'>All Rights Reserved @2021</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
