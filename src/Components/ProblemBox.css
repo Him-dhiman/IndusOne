@@ -1,0 +1,66 @@
+.ProblemBox {
+    background: #FFFFFF;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ProblemBox:hover {
+    box-shadow: 1px 1px 6px #000000;
+
+}
+
+.problem-details h5 {
+    font-weight: 100;
+}
+
+.problem-name {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.problem-difficulty,
+.problem-points {
+    font-size: 0.85rem;
+}
+
+.solve-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solve-button {
+    color: #000000;
+    margin: 0;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    border-radius: 5px;
+    font-weight: bold;
+    background: var(--lightblue);
+    border: 1px solid black;
+    transition: 0.1s ease-in-out;
+}
+
+.solve-button:hover {
+    cursor: pointer;
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .ProblemBox {
+        flex-direction: column;
+    }
+
+    .problem-details {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}
