@@ -37,7 +37,7 @@ function Cards() {
               path="/products"
             />
             <CardItem
-              src="images/img-8.jpg"
+              src="images/img-5.jpg"
               text="Learn More"
               label="More"
               path="/sign-up"

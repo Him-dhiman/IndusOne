@@ -16,15 +16,15 @@ export const FormContainer = styled.form`
 `;
 
 export const MutedLink = styled.a`
-  font-size: 11px;
-  color: rgba(200, 200, 200, 0.8);
+  font-size: 13px;
+  color: rgba(200, 200, 200, 200);
   font-weight: 500;
   text-decoration: none;
 `;
 
 export const BoldLink = styled.a`
-  font-size: 11px;
-  color: rgb(241, 196, 15);
+  font-size: 13px;
+  color: #2C5364;
   font-weight: 500;
   text-decoration: none;
   margin: 0 4px;
@@ -66,9 +66,9 @@ export const SubmitButton = styled.button`
   transition: all, 240ms ease-in-out;
   background: rgb(241, 196, 15);
   background: linear-gradient(
-    58deg,
-    rgba(241, 196, 15, 1) 20%,
-    rgba(243, 172, 18, 1) 100%
+    90deg,
+    #2C5364 20%, 
+    #2C5364 100%
   );
 
   &:hover {

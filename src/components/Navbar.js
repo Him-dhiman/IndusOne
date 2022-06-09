@@ -28,7 +28,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            TechIndus <i className="fa-solid fa-globe"></i>
+            Tech IndusOne <i className="fa-solid fa-globe"></i>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
@@ -63,9 +63,10 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonstyle="btn--outlinw">Sign Up</Button>}
+          {button && <Button buttonstyle="btn--outlinw">Sign In</Button>}
         </div>
       </nav>
+      <div className="new--line--add"></div>
     </>
   );
 }

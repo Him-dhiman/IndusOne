@@ -21,13 +21,29 @@ export function SignupForm(props) {
         <Input type="password" placeholder="Password" />
         <Input type="password" placeholder="Confirm Password" />
       </FormContainer>
-      <Marginer direction="vertical" margin={10} />
+      <Marginer direction="vertical" margin="1.6em" />
       <SubmitButton type="submit">Signup</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
         Already have an account?
         <BoldLink href="#" onClick={switchToSignin}>
           Signin
+        </BoldLink>
+      </MutedLink>
+      <Marginer direction="vertical" margin="1em" />
+      <MutedLink href="#">
+        Sign Up Using &nbsp;
+        <BoldLink href="#">
+          <i class='fab fa-google' />
+        </BoldLink>
+        <BoldLink href="#">
+          <i class='fab fa-facebook-f' />
+        </BoldLink>
+        <BoldLink href="#">
+          <i class='fab fa-twitter' />
+        </BoldLink>
+        <BoldLink href="#">
+          <i class='fab fa-linkedin' />
         </BoldLink>
       </MutedLink>
     </BoxContainer>

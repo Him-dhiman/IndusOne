@@ -35,10 +35,15 @@
   }
   
   .sign-up {
-    background-image: url('../public/images/img-8.jpg');
+    background-image: url('../public/images/img-5.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
     font-size: 100px;
-  } 
+  }
+  
+  .new--line--add {
+    height: 1px;
+    background: linear-gradient(90deg, #0F2027 0%, aquamarine 50%, #0F2027 100%);
+  }
