@@ -9,7 +9,7 @@ const BoxContainer = styled.div`
   margin-top: 5vh;
   margin-bottom: 5vh;
   width: 300px;
-  min-height: 600px;
+  min-height: 580px;
   display: flex;
   flex-direction: column;
   border-radius: 19px;

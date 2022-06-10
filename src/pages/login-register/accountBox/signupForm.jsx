@@ -21,7 +21,7 @@ export function SignupForm(props) {
         <Input type="password" placeholder="Password" />
         <Input type="password" placeholder="Confirm Password" />
       </FormContainer>
-      <Marginer direction="vertical" margin="1.6em" />
+      <Marginer direction="vertical" margin="1em" />
       <SubmitButton type="submit">Signup</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
