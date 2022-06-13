@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import Body from './Components/Body.js'
+import Body from './components/Body.js'
 import './App.css';
-import Header from "./Components/common/heading/Header"
+import Header from "./components/common/heading/Header"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import React from "react";
-import Footer from './Components/common/footer/Footer';
+import Footer from './components/common/footer/Footer';
 
 const App = () => {
   return (

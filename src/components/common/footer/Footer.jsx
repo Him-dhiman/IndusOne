@@ -13,7 +13,7 @@ const Footer = () => {
 </span>
           </div>
           <div >
-         <input type='text' placeholder='Enter email address'/><i className='fa fa-paper-plane'></i>
+         <input type='text' placeholder='Enter email address'/><button className="btn btn-outline-dark" type="submit"><i class="fa fa-paper-plane"></i></button>
           </div>
         </div>
       </section>

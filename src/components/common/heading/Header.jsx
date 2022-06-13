@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 /*import search from "./search"*/
-import Head from "./Head"
+/*import Head from "./Head"*/
 import "./header.css"
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,22 +12,33 @@ const Header = () => {
 
     return (
         <>
-            <Head />
+
             <header>
                 <nav className="flexSB">
-                    <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
-                        <li><Link to='/'>Prepare</Link></li>
-                        <li><Link to='/Certify'>Certify</Link></li>
-                        <li><Link to='/compete'>Compete</Link></li>
-                        <li><Link to='/team'>Team</Link></li>
+                    <div className='container flexSB' mx>
+                        <div className='logo'>
+                            <h1>Tech IndusOne</h1>
+                            <span>IT SERVICES & IT CONSULTING</span>
+                        </div>
+                        <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
+                            <li aria-current="page" ><Link to='/'>Prepare</Link></li>
+                            <li><Link to='/Certify'>Certify</Link></li>
+                            <li><Link to='/compete'>Compete</Link></li>
 
-                        <li><Link to='/contact'>Contact</Link></li>
-                    </ul>
+
+                            <li><Link to='/contact'>Contact</Link></li>
+                        </ul>
+                    </div>
+
                     <div className='start'>
                         <div className='button'>
                             <Navbar>
                                 <Navbar.Collapse id="responsive-navbar-nav">
                                     <Nav>
+                                        <form className="d-flex" role="search">
+                                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                                            <button className="btn btn-outline-dark" type="submit"><i class="fa fa-search"></i></button>
+                                        </form>
                                         <NavDropdown title={<div style={{ display: "inline-block" }}><i className='fa fa-bell icon' /></div>} id="nav-dropdown">
                                             <NavDropdown.Item>
                                                 <Nav.Link eventKey="news1" href="#home">
@@ -53,7 +64,7 @@ const Header = () => {
                                             </NavDropdown.Item>
                                             <NavDropdown.Item>
                                                 <Nav.Link eventKey="dashboard" href="#">
-                                                    <i class='fa fa-dashboard'></i> Dashboard
+                                                    <i className='fa fa-dashboard'></i> Dashboard
                                                 </Nav.Link>
                                             </NavDropdown.Item>
                                             <NavDropdown.Item>
