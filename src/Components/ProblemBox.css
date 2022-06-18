@@ -31,19 +31,20 @@
 }
 
 .solve-button {
-    color: #000000;
+    color: #a4bfef;
     margin: 0;
     padding: 0.5rem 3rem 0.5rem 3rem;
     border-radius: 2px;
     font-weight: bold;
-    background: var(--lightblue);
-    border: 1px solid black;
+    
+    border: 1px solid #a4bfef;
     transition: 0.1s ease-in-out;
 }
 
 .solve-button:hover {
     cursor: pointer;
-    background: #22d6c7;
+    background: #a4bfef;
+    color: #FFFFFF;
 }
 
 @media screen and (max-width: 768px) {

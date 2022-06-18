@@ -3,19 +3,21 @@ import 'font-awesome/css/font-awesome.min.css';
 import Body from './components/Body.js'
 import './App.css';
 import Header from "./components/common/heading/Header"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import React from "react";
 import Footer from './components/common/footer/Footer';
+import certify from './components/common/certify/Cards.js';
 
 const App = () => {
   return (
     <>
       <Router>
         <Header />
-        <Routes>
-        <Route exact path="/" element={<Body />} />          
-        </Routes>
+        <Switch>
+        <Route exact path="/" component={Body} />   
+        <Route exact path='/certify' component={certify} />    
+        </Switch >
         <Footer/>
       </Router>
       

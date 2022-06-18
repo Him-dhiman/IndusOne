@@ -22,11 +22,11 @@ const Header = () => {
                         </div>
                         <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
                             <li aria-current="page" ><Link to='/'>Prepare</Link></li>
-                            <li><Link to='/Certify'>Certify</Link></li>
+                            <li><Link to='/certify'>Certify</Link></li>
                             <li><Link to='/compete'>Compete</Link></li>
 
 
-                            <li><Link to='/contact'>Contact</Link></li>
+                            
                         </ul>
                     </div>
 
