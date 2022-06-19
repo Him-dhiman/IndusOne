@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './Body.css'
+import './Prepare.css'
 
 import ProblemList from './ProblemList.js'
 import Filter from './Filter.js'
@@ -14,7 +14,7 @@ const Body = () => {
   const [category, setCategory] = useState(new Array(categories.length).fill(false))
   
   return (
-    <div className="Body">
+    <div className="Prepare">
 
       <ProblemList 
         filter1 = {difficulty}

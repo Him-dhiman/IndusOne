@@ -1,0 +1,22 @@
+.Competitions {
+    width: 80%;
+    padding: 2rem;
+}
+
+.competition-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.set-reminder {
+    text-decoration: underline;
+}
+.set-reminder:hover {
+    cursor: pointer
+}
+
+
+.reminder-bell {
+    margin-left: 1rem;
+}

@@ -10,6 +10,7 @@ const ProblemBox = (props) => {
                 <h5 className="problem-points">Points: {props.points}</h5>
             </div>
             <div className="solve-button-container">
+                <i className="fa fa-bookmark bookmark-icon"></i>
                 <button className="solve-button">
                     {(props.status === "Solved")?"Solved ✓":"Attempt !"}
                 </button>

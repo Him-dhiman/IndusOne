@@ -68,6 +68,11 @@ const Header = () => {
                                                 </Nav.Link>
                                             </NavDropdown.Item>
                                             <NavDropdown.Item>
+                                                <Nav.Link eventKey="logout" href="#">
+                                                    <Link to="/saved-questions"><i className="fa fa-bookmark"></i>Saved</Link>
+                                                </Nav.Link>
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Item>
                                                 <Nav.Link eventKey="setting" href="#">
                                                     <i className="fa fa-gear fa-fw"></i> Settings
                                                 </Nav.Link>
