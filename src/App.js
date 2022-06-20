@@ -10,7 +10,7 @@ import IMS from "./pages/IMS";
 import AI_Connect from "./pages/AI_Connect";
 import Learn from "./pages/Learn";
 import More from "./pages/More";
-import Technologies from "./pages/Technologies";
+import UI from "./pages/Technologies";
 function App() {
   return (
     <>
@@ -77,10 +77,10 @@ function App() {
 
         // -------------------------------------------------------
         <Route
-          path="/Technologies"
+          path="/UI"
           element={
             <>
-            <Technologies />
+            <UI />
             </>
           }
         />
