@@ -24,7 +24,7 @@ function Footer() {
                 name="email"
                 type="email"
                 placeholder="Your Email"
-              />  
+              />
               <Button buttonStyle="btn--outline">Subscribe</Button>
            </form>
           </div>
@@ -33,10 +33,10 @@ function Footer() {
           <div className="footer-link-wrapper">
             <div class="footer-link-items">
               <h2>Products</h2>
-              <Link to="/">User Interface</Link>
+              <Link to="/">New Technologies</Link>
               <Link to="/">AI Connect</Link>
               <Link to="/">IMS</Link>
-              <Link to="/">Others</Link>
+              <Link to="/">Learn</Link>
             </div>
             <div class="footer-link-items">
               <h2>Explore</h2>
