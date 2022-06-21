@@ -5,6 +5,8 @@ import { Link } from "react-router-dom"
 const Footer = () => {
   return (
     <>
+    
+
       <section className='newletter'>
         <div className='container flexSB'>
           <div className='left row'>

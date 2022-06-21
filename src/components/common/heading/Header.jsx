@@ -24,6 +24,7 @@ const Header = () => {
                             <li aria-current="page" ><Link to='/'>Prepare</Link></li>
                             <li><Link to='/certify'>Certify</Link></li>
                             <li><Link to='/compete'>Compete</Link></li>
+                            
 
 
                             
@@ -37,7 +38,7 @@ const Header = () => {
                                     <Nav>
                                         <form className="d-flex" role="search">
                                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                            <button className="btn btn-outline-dark" type="submit"><i class="fa fa-search"></i></button>
+                                            
                                         </form>
                                         <NavDropdown title={<div style={{ display: "inline-block" }}><i className='fa fa-bell icon' /></div>} id="nav-dropdown">
                                             <NavDropdown.Item>
@@ -63,6 +64,7 @@ const Header = () => {
                                                 </Nav.Link>
                                             </NavDropdown.Item>
                                             <NavDropdown.Item>
+                                            
                                                 <Nav.Link eventKey="dashboard" href="#">
                                                     <i className='fa fa-dashboard'></i> Dashboard
                                                 </Nav.Link>
