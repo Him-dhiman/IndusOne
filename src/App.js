@@ -10,7 +10,8 @@ import IMS from "./front-end/before-login/pages/IMS";
 import AIConnect from "./front-end/before-login/pages/AI_Connect";
 import Learn from "./front-end/before-login/pages/Learn";
 import More from "./front-end/before-login/pages/More";
-import Technologies from "./front-end/before-login/pages/Technologies";
+import UI from "./front-end/before-login/pages/Technologies";
+
 function App() {
   return (
     <>
@@ -44,16 +45,18 @@ function App() {
               </>
             }
           />
+
           {/*------------------------------------------------------- */}
           <Route
-            path="/AI_Connect"
+            path="/AIConnect"
             element={
               <>
                 <AIConnect />
               </>
             }
           />
-          { /*------------------------------------------------------- */} 
+
+          {/*------------------------------------------------------- */}
           <Route
             path="/Learn"
             element={
@@ -62,7 +65,7 @@ function App() {
               </>
             }
           />
-          { /*------------------------------------------------------- */} 
+          {/*------------------------------------------------------- */}
           <Route
             path="/More"
             element={
@@ -71,16 +74,18 @@ function App() {
               </>
             }
           />
-          { /*------------------------------------------------------- */} 
+
+          {/*------------------------------------------------------- */}
           <Route
-            path="/Technologies"
+            path="/UI"
             element={
               <>
-                <Technologies />
+                <UI />
               </>
             }
           />
-          { /*------------------------------------------------------- */} 
+
+          {/*------------------------------------------------------- */}
         </Routes>
         <Footer />
       </Router>
