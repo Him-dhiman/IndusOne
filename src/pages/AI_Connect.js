@@ -4,6 +4,9 @@ import Carousel from '../components/Carousel';
 import CardItem from '../components/MDB_Cards';
 import CardItem_2 from '../components/MDB_Cards_2';
 import image from '../h-images/AI_Connect.png';
+import image1 from '../h-images/AI-1.jpg';
+import image2 from '../h-images/AI-2.jpg';
+import image3 from '../h-images/AI-3.jpg';
 function AI_Connect() {
   return (
       <>
@@ -20,17 +23,17 @@ function AI_Connect() {
         content="Learn"
         /> </MDBCol>
         <MDBCol sm='3'><CardItem_2
-          src="images/h-images/AI-1.jpg"
+          src={image1}
           title="Learning content from more than 1000 companies in the form of challenges."
           content="Learn"
         /> </MDBCol>
         <MDBCol sm='3'><CardItem_2
-        src="images/h-images/AI-2.jpg"
+        src={image2}
         title="Learning content from more than 1000 companies in the form of challenges."
         content="Learn"
         /> </MDBCol>
         <MDBCol sm='3'><CardItem_2
-        src="images/h-images/AI-3.jpg"
+        src={image3}
         title="Learning content from more than 1000 companies in the form of challenges."
         content="Learn"
         /> </MDBCol>
