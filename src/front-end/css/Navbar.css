@@ -1,5 +1,5 @@
-.navbar {
-  background: linear-gradient(90deg, #0F2027 0%, #203A43 30%, #0F2027 100%);
+.navbar__ {
+  background: linear-gradient(90deg, #e4eee9 0%, #93a5ce 74%);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -10,7 +10,7 @@
   z-index: 999;
 }
 
-.navbar-container {
+.navbar--container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,6 +43,7 @@
   width: 60vw;
   justify-content: end;
   margin-right: 2rem;
+  padding-top: 15px; /* temporary adjustment */
 }
 
 .nav-item {

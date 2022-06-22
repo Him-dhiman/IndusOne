@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function AI_Connect() {
+function AIConnect() {
   return (
       <>
 
@@ -9,4 +9,4 @@ function AI_Connect() {
   );
 }
 
-export default AI_Connect;
+export default AIConnect;

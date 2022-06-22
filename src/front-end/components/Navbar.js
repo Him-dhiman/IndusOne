@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
+import { Button } from "../before-login/components/Button";
 import "../css/Navbar.css";
 
 function Navbar() {
@@ -25,8 +25,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
-        <div className="navbar-container">
+      <nav className="navbar__">
+        <div className="navbar--container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             Tech IndusOne <i className="fa-solid fa-globe"></i>
           </Link>

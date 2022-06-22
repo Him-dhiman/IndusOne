@@ -2,15 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import LandingPage from "./pages/LandingPage";
-import SignInAndSignUp from "./pages/login-register/design";
-import IMS from "./pages/IMS";
-import AI_Connect from "./pages/AI_Connect";
-import Learn from "./pages/Learn";
-import More from "./pages/More";
-import Technologies from "./pages/Technologies";
+import Navbar from "./front-end/components/Navbar";
+import Footer from "./front-end/components/Footer";
+import LandingPage from "./front-end/before-login/pages/LandingPage";
+import SignInAndSignUp from "./front-end/before-login/pages/login-register/design";
+import IMS from "./front-end/before-login/pages/IMS";
+import AIConnect from "./front-end/before-login/pages/AI_Connect";
+import Learn from "./front-end/before-login/pages/Learn";
+import More from "./front-end/before-login/pages/More";
+import Technologies from "./front-end/before-login/pages/Technologies";
 function App() {
   return (
     <>
@@ -26,67 +26,62 @@ function App() {
               </>
             }
           />
-          // -------------------------------------------------------
+          {/*------------------------------------------------------- */}
           <Route
             path="/sign-in"
             element={
               <>
-              <SignInAndSignUp />
+                <SignInAndSignUp />
               </>
             }
           />
-          // ---------------------------------------------------
+          {/*------------------------------------------------------- */}
           <Route
             path="/IMS"
             element={
               <>
-              <IMS />
+                <IMS />
               </>
             }
           />
-
-        // ------------------------------------------------------------
-        <Route
-          path="/AI_Connect"
-          element={
-            <>
-            <AI_Connect/>
-            </>
-          }
-        />
-
-        // --------------------------------------------------------------
-        <Route
-          path="/Learn"
-          element={
-            <>
-            <Learn />
-            </>
-          }
-        />
-  ]
-        // ----------------------------------------------------------
-        <Route
-          path="/More"
-          element={
-            <>
-            <More />
-            </>
-          }
-        />
-
-        // -------------------------------------------------------
-        <Route
-          path="/Technologies"
-          element={
-            <>
-            <Technologies />
-            </>
-          }
-        />
-
-// --------------------------------------------------------------
-  </Routes>
+          {/*------------------------------------------------------- */}
+          <Route
+            path="/AI_Connect"
+            element={
+              <>
+                <AIConnect />
+              </>
+            }
+          />
+          { /*------------------------------------------------------- */} 
+          <Route
+            path="/Learn"
+            element={
+              <>
+                <Learn />
+              </>
+            }
+          />
+          { /*------------------------------------------------------- */} 
+          <Route
+            path="/More"
+            element={
+              <>
+                <More />
+              </>
+            }
+          />
+          { /*------------------------------------------------------- */} 
+          <Route
+            path="/Technologies"
+            element={
+              <>
+                <Technologies />
+              </>
+            }
+          />
+          { /*------------------------------------------------------- */} 
+        </Routes>
         <Footer />
       </Router>
     </>

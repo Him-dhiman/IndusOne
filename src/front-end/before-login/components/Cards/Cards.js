@@ -4,7 +4,7 @@ import CardItem from "./CardItem";
 
 function Cards() {
   return (
-    <div className="cards">
+    <div className="cards__">
       <h1>Check out the services provided by us!</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
@@ -21,14 +21,14 @@ function Cards() {
               label="AI Connect"
               path="/AI_Connect"
             />
-          </ul>
-          <ul className="cards__items">
             <CardItem
               src="images/img-3.jpg"
               text="One stop shop for Hiring world level technicians through our Managed HR services."
               label="IMS"
               path="/IMS"
             />
+          </ul>
+          <ul className="cards__items">
             <CardItem
               src="images/img-4.jpg"
               text="Plenitude of articles on new and emerging technologies ​
@@ -41,6 +41,12 @@ function Cards() {
               text="Learn More"
               label="More"
               path="/More"
+            />
+            <CardItem
+              src="images/img-6.jpg"
+              text="Some of the frequently asked queestions and answers"
+              label="FAQs"
+              path="/faqs"
             />
           </ul>
         </div>
