@@ -15,6 +15,8 @@ const ProblemList = (props) => {
                       difficulty = {problem.difficulty}
                       points = {problem.points}
                       status = {problem.status}
+                      description = {problem.description}
+                      setQuestion = {props.setQuestion}
                     />:null
                     )
                   }    
@@ -55,6 +57,8 @@ const ProblemList = (props) => {
               difficulty = {problem.difficulty}
               points = {problem.points}
               status = {problem.status}
+              description = {problem.description}
+              setQuestion = {props.setQuestion}
             />:null
             )
           }    

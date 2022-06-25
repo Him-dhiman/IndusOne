@@ -13,7 +13,8 @@ export let solno=0
     function submit(){
         solno++;
     } 
-function Ide() {
+function Ide({question}) {
+    console.log(question);
     const [userCode, setUserCode] = useState(``);
     const [userLang, setUserLang] = useState("python");
     const [userTheme, setUserTheme] = useState("vs-dark");
@@ -60,7 +61,11 @@ function Ide() {
         { value: "light", label: "Light" },
     ]
     return (
-        <><h2 className="quest my-3">Tower of Hanoi</h2>
+        <><h2 className="quest my-3">{question.title}</h2>
+
+        <div className="question-content">
+            {question.description}
+        </div>
 
 
             <div className="Ide ">

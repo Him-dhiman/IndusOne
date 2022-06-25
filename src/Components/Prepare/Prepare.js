@@ -4,7 +4,7 @@ import './Prepare.css'
 import ProblemList from './ProblemList.js'
 import Filter from './Filter.js'
 
-const Body = () => {
+const Body = ({setQuestion}) => {
 
   const diffAttr = ["Easy", "Medium", "Hard"]
   const statAttr = ["Solved", "Unsolved"]
@@ -23,6 +23,7 @@ const Body = () => {
         filter1Attr = {diffAttr} 
         filter2Attr = {statAttr}
         filter3Attr = {categories}
+        setQuestion = {setQuestion}
       /> 
 
       <div>

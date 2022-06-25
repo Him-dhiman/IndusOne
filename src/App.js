@@ -3,37 +3,39 @@ import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Cards from './components/common/certify/Cards.js'
+import Cards from './Components/common/certify/Cards.js'
 
-import Header from "./components/common/heading/Header"
+import Header from "./Components/common/heading/Header"
 import React, {useState} from "react";
-import Footer from './components/common/footer/Footer'
+import Footer from './Components/common/footer/Footer'
 
-import Prepare from './components/Prepare/Prepare.js'
-import Compete from './components/Compete/Compete.js'
-import SavedQuestions from './components/Saved/SavedProblems.js'
-import Ide from './components/common/ide/Ide.js';
-import Submissions from './components/common/ide/Submissions';
-import FAQ from './components/FAQ/FAQ';
+import Prepare from './Components/Prepare/Prepare.js'
+import Compete from './Components/Compete/Compete.js'
+import SavedQuestions from './Components/Saved/SavedProblems.js'
+import Ide from './Components/common/ide/Ide.js';
+import Submissions from './Components/common/ide/Submissions';
+import FAQ from './Components/FAQ/FAQ';
+
+import ScrollToTop from './Utils/ScrollToTop'
 
 
 
 const App = () => {
-  const [userCode, setUserCode] = useState(``);
+  const [question, setQuestion] = useState("");
   return (
     <>
       <Router>
         <Header />
-
-        <Routes>
-        <Route exact path="/" element={<Prepare/>} />   
-        <Route exact path='/certify' element={<Cards/>} />  
-        <Route exact path='/Ide' element={<Ide />}/>
-        <Route exact path="/compete" element={<Compete/> } />     
-        <Route exact path="/FAQ" element={<FAQ/>}/>
-        <Route exact path="/saved-questions" element={<SavedQuestions/>} />
-        <Route exact path="/submissions" element={<Submissions />} />
-        </Routes >
+          <ScrollToTop />
+          <Routes>
+            <Route exact path="/" element={<Prepare setQuestion={setQuestion}/>} />   
+            <Route exact path='/certify' element={<Cards/>} />  
+            <Route exact path='/Ide' element={<Ide question={question}/>}/>
+            <Route exact path="/compete" element={<Compete/> } />     
+            <Route exact path="/FAQ" element={<FAQ/>}/>
+            <Route exact path="/saved-questions" element={<SavedQuestions/>} />
+            <Route exact path="/submissions" element={<Submissions />} />
+          </Routes >
         <Footer/>
       </Router>
       

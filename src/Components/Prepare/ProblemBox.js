@@ -12,7 +12,7 @@ const ProblemBox = (props) => {
             </div>
             <div className="solve-button-container">
                 <i className="far fa-bookmark bookmark-icon"></i>
-                <Link to="/Ide"><button className="solve-button">
+                <Link to="/Ide"><button className="solve-button" onClick={() => props.setQuestion({title: props.name, description: props.description})}>
                     {(props.status === "Solved")?"Solved ✓":"Attempt !"}
                 </button></Link>
             </div>        
