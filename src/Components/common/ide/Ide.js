@@ -6,15 +6,19 @@ import Container from 'react-bootstrap/Container';
 import Axios from 'axios';
 import spinner from './images/spinner.png';
 import Select from 'react-select';
-import { Nav, Navbar} from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
+/*import { Link } from "react-router-dom"*/
 
-
-
-function Ide(props) {
+export let solno=0
+    function submit(){
+        solno++;
+    } 
+function Ide() {
     const [userCode, setUserCode] = useState(``);
     const [userLang, setUserLang] = useState("python");
     const [userTheme, setUserTheme] = useState("vs-dark");
     const [fontSize, setFontSize] = useState(20);
+
     const [userInput, setUserInput] = useState("");
     const [userOutput, setUserOutput] = useState("");
     const [loading, setLoading] = useState(false);
@@ -43,6 +47,8 @@ function Ide(props) {
     function clearOutput() {
         setUserOutput("");
     }
+    
+
     const languages = [
         { value: "c", label: "C" },
         { value: "cpp", label: "C++" },
@@ -55,7 +61,7 @@ function Ide(props) {
     ]
     return (
         <><h2 className="quest my-3">Tower of Hanoi</h2>
-           {props.question}
+
 
             <div className="Ide ">
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -79,14 +85,13 @@ function Ide(props) {
                             </Nav>
                             <Nav>
                                 <Nav.Link href="/discussions">Discussions</Nav.Link>
-                                <Nav.Link href="#submissions">Submissions</Nav.Link>
+                                <Nav.Link href="/submissions">Submissions</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-                <button className="run-btn" onClick={() => compile()}>
-                    <li>Run</li>
-                </button>
+
+
                 <div className="main">
                     <div className="left-container">
                         <Editor
@@ -98,11 +103,13 @@ function Ide(props) {
                             defaultLanguage="python"
                             defaultValue="# Enter your code here"
                             onChange={(value) => { setUserCode(value) }}
-
+                            
                         />
                         <button className="run-btn" onClick={() => compile()}>
                             <li>Run</li>
                         </button>
+                        <button className="sub-btn" onClick={() => submit()}> <li>Submit</li></button>
+
                     </div>
                     <div className="right-container">
                         <h4>Input:</h4>

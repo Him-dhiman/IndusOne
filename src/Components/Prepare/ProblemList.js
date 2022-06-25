@@ -1,9 +1,25 @@
 import React from 'react'
 import ProblemBox from './ProblemBox.js'
-import ProblemDetails from '../Data/ProblemDetails.js'
+import ProblemDetails from '../../Data/ProblemDetails.js'
 import './ProblemList.css'
 
 const ProblemList = (props) => {
+
+    if(props.filter4) {
+      return <div className="ProblemList">
+                  { ProblemDetails.map((problem) => 
+                    //print only if question matches with required atttributes
+                    (problem.saved)?
+                    <ProblemBox 
+                      name = {problem.name}
+                      difficulty = {problem.difficulty}
+                      points = {problem.points}
+                      status = {problem.status}
+                    />:null
+                    )
+                  }    
+            </div>
+    }
 
     var difficulty = props.filter1
     var status = props.filter2
@@ -29,8 +45,7 @@ const ProblemList = (props) => {
     
   return (
     <div className="ProblemList">
-          { ProblemDetails.map((problem) =>
-
+          { ProblemDetails.map((problem) => 
             //print only if question matches with required atttributes
             (diff.includes(problem.difficulty) && stat.includes(problem.status) && cat.some(item =>
               problem.category.includes(item)

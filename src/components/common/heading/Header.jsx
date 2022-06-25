@@ -65,8 +65,13 @@ const Header = () => {
                                             </NavDropdown.Item>
                                             <NavDropdown.Item>
                                             
-                                                <Nav.Link eventKey="dashboard" href="#">
-                                                    <i className='fa fa-dashboard'></i> Dashboard
+                                                <Nav.Link eventKey="dashboard"><Link to="/dashboard">
+                                                    <i className='fa fa-dashboard'></i> Dashboard</Link>
+                                                </Nav.Link>
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Item>
+                                                <Nav.Link eventKey="saved">
+                                                    <Link to="/saved-questions"><i className="far fa-bookmark"></i>Saved</Link>
                                                 </Nav.Link>
                                             </NavDropdown.Item>
                                             <NavDropdown.Item>

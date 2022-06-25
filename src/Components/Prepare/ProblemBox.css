@@ -47,6 +47,14 @@
     color: #FFFFFF;
 }
 
+.bookmark-icon, .fa-bookmark {
+    margin-right: 10px;
+}
+
+.bookmark-icon:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .ProblemBox {
         flex-direction: column;

@@ -7,7 +7,7 @@ import ruby from './images/ruby.png'
 import ml from './images/ml.png'
 import dl from './images/dl.png'
 import python from './images/python.png'
-function Cards() {
+const Cards = () => {
   return (
     <div className="cards">
       <h2>Get Certified - Stand out from the crowd</h2>
@@ -52,6 +52,7 @@ function Cards() {
               path="/python"
             />
           </ul>
+          
         </div>
       </div>
     </div>

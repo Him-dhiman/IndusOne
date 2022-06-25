@@ -4,70 +4,80 @@ const ProblemDetails = [
       difficulty: "Easy",
       points: 20,
       status: "Unsolved",
-      category: ["Recursion"]
+      category: ["Recursion"],
+      saved: false
     },
     { 
       name: "Connected Components",
       difficulty: "Hard",
       points: 70,
       status: "Solved",
-      category: ["Graphs"]
+      category: ["Graphs"],
+      saved: false
     },
     { 
       name: "Rat in Maze",
       difficulty: "Medium",
       points: 50,
       status: "Solved",
-      category: ["Graphs"]
+      category: ["Graphs"],
+      saved: true
     },
     { 
       name: "Bit Game",
       difficulty: "Easy",
       points: 20,
       status: "Unsolved",
-      category: ["Bit Manipulation", "Recursion"]
+      category: ["Bit Manipulation", "Recursion"],
+      saved: false
     },
     { 
       name: "Shortest Path",
       difficulty: "Hard",
       points: 100,
       status: "Unsolved",
-      category: ["Graph"]
+      category: ["Graph"],
+      saved: false
     },
     {
       name: "Count the Balloons",
       difficulty: "Medium",
       points: 60,
       status: "Solved",
-      category: ["Dynamic Programming"]
+      category: ["Dynamic Programming"],
+      saved: false
     },
     {
       name: "String Subsequences",
       difficulty: "Medium",
       points: 50,
       status: "Unsolved",
-      category: ["Dynamic Programming", "Strings"]
+      category: ["Dynamic Programming", "Strings"],
+      saved: false
     },
     {
       name: "Rainwater Trapping",
       difficulty: "Hard",
       points: 100,
       status: "Unsolved",
-      category: ["Dynamic Programming", "Arrays"]
+      category: ["Dynamic Programming", "Arrays"],
+      saved: true
     },  
     {
       name: "String Concatenate",
       difficulty: "Easy",
       points: 30,
       status: "Solved",
-      category: ["Strings"]
+      category: ["Strings"],
+      saved: false
     },
     {
       name: "Balanced Parantheses",
       difficulty: "Medium",
       points: 50,
       status: "Unsolved",
-      category: ["Stacks"]
+      category: ["Stacks"],
+      saved: false
     }  
 ]
 

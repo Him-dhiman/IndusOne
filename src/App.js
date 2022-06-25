@@ -1,26 +1,39 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import Body from './components/Body.js'
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Cards from './components/common/certify/Cards.js'
+
 import Header from "./components/common/heading/Header"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ide from './components/common/ide/Ide'
-import React from "react";
-import Footer from './components/common/footer/Footer';
-import certify from './components/common/certify/Cards.js';
+import React, {useState} from "react";
+import Footer from './components/common/footer/Footer'
+
+import Prepare from './components/Prepare/Prepare.js'
+import Compete from './components/Compete/Compete.js'
+import SavedQuestions from './components/Saved/SavedProblems.js'
+import Ide from './components/common/ide/Ide.js';
+import Submissions from './components/common/ide/Submissions';
+import FAQ from './components/FAQ/FAQ';
+
 
 
 const App = () => {
+  const [userCode, setUserCode] = useState(``);
   return (
     <>
       <Router>
         <Header />
-        <Switch>
-        <Route exact path="/" component={Body} />   
-        <Route exact path='/certify' component={certify} />  
-        <Route exact path='/ide' component={ide}/>
-        
-        </Switch >
+
+        <Routes>
+        <Route exact path="/" element={<Prepare/>} />   
+        <Route exact path='/certify' element={<Cards/>} />  
+        <Route exact path='/Ide' element={<Ide />}/>
+        <Route exact path="/compete" element={<Compete/> } />     
+        <Route exact path="/FAQ" element={<FAQ/>}/>
+        <Route exact path="/saved-questions" element={<SavedQuestions/>} />
+        <Route exact path="/submissions" element={<Submissions />} />
+        </Routes >
         <Footer/>
       </Router>
       

@@ -1,5 +1,6 @@
 import React from 'react'
 import './ProblemBox.css'
+import { Link } from "react-router-dom"
 
 const ProblemBox = (props) => {
   return (
@@ -10,9 +11,10 @@ const ProblemBox = (props) => {
                 <h5 className="problem-points">Points: {props.points}</h5>
             </div>
             <div className="solve-button-container">
-                <button className="solve-button">
+                <i className="far fa-bookmark bookmark-icon"></i>
+                <Link to="/Ide"><button className="solve-button">
                     {(props.status === "Solved")?"Solved ✓":"Attempt !"}
-                </button>
+                </button></Link>
             </div>        
     </div>
   )
