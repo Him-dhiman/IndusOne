@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Cards from './Components/common/certify/Cards.js'
 
-import Header from "./Components/common/heading/Header"
+import Header from "./components/common/heading/Header"
 import React, {useState} from "react";
-import Footer from './Components/common/footer/Footer'
+import Footer from './components/common/footer/Footer'
 
 import Prepare from './Components/Prepare/Prepare.js'
 import Compete from './Components/Compete/Compete.js'
