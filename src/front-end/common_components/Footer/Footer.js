@@ -1,6 +1,6 @@
 import React from "react";
-import "../common_css/Footer.css";
-import { Button } from "../before-login/components/Button";
+import "./Footer.css";
+import { Button } from "../../before-login/components/ButtonNavbar/Button";
 import { Link } from "react-router-dom";
 import { MDBIcon } from 'mdb-react-ui-kit';
 function Footer() {

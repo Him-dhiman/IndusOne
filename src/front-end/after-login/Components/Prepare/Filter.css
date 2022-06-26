@@ -1,0 +1,16 @@
+.filter {
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+.filter h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.filter-list {
+    list-style-type: none;
+}
+
+.filter-list label {
+    margin-left: 1rem;
+}

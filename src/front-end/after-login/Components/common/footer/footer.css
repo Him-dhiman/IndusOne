@@ -1,0 +1,144 @@
+.__newletter {
+  background-color: #e4eee9;
+background-image: linear-gradient(315deg, #e4eee9 0%,#93a5ce 74% );
+  padding: 50px 0;
+  color: #fff;
+  
+}
+
+.__newletter .right,
+.__newletter .left {
+  padding-right: 50px;
+}
+
+.__newletter h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.__newletter .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.__newletter input {
+  width: 80%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 400px;
+  margin-top: 50px;
+}
+
+.__newletter button i {
+  padding: -2px;
+  color: #0F2027;
+  
+  margin-top: -10px;
+}
+.__newletter button{
+  height: 40px;
+  background-color: #fff;
+  border-left: #fff ;
+  border: none;
+  margin-top: -5px;
+  border-radius: 0%;
+}
+.__newletter button :hover{
+  color: #fff;
+}
+
+footer {
+  background-color: #eeeeee;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: 5fr 2fr 2fr 3fr;
+  grid-gap: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+footer .logo span {
+  color: #0F2027;
+  font-size: 14px;
+}
+
+footer .logo p {
+  color: grey;
+  margin: 30px 0 15px 0;
+}
+
+footer .logo .icon {
+  background-color: #0F2027;
+  color: white;
+  margin-right: 10px;
+}
+
+
+footer h1 {
+  margin-top: 30px;
+}
+
+footer h3 {
+  margin-bottom: 40px;
+  font-weight: 500;
+  margin-top: 30px;
+  text-align: right;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+  margin-left: 50px;
+  width: 80px;
+
+}
+
+footer ul li a {
+  color: #000;
+}
+
+footer .icon {
+  margin-bottom: 20px;
+}
+
+footer .items {
+  margin-bottom: 30px;
+}
+
+footer .items img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+footer .items span,
+footer .items i {
+  font-size: 12px;
+  color: #0F2027;
+  margin-right: 5px;
+  text-transform: capitalize;
+}
+
+footer .last ul li {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+footer .last i {
+  width: 100px;
+  font-size: 20px;
+  color: #0F2027;
+  margin-right: 20px;
+}
