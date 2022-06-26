@@ -1,6 +1,6 @@
 import React from 'react'
 import './Compete.css'
-// import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import Competitions from './Competitions.js'
 
 const Compete = () => {

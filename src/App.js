@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "font-awesome/css/font-awesome.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "font-awesome/css/font-awesome.min.css";
 
 import "./App.css";
 import Navbar from "./front-end/common_components/Navbar/Navbar";
