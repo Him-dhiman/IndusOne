@@ -75,8 +75,8 @@ const Header = () => {
                                                 </Nav.Link>
                                             </NavDropdown.Item>
                                             <NavDropdown.Item>
-                                                <Nav.Link eventKey="logout" href="#">
-                                                    <i className="fa fa-sign-out fa-fw"></i> Logout
+                                                <Nav.Link eventKey="logout"><Link to="/">
+                                                    <i className="fa fa-sign-out fa-fw"></i> Logout</Link>
                                                 </Nav.Link>
                                             </NavDropdown.Item>
                                         </NavDropdown>

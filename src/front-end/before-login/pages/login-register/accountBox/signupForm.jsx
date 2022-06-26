@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useCallback } from "react";
+import { useNavigate } from 'react-router-dom';
 import {
   BoldLink,
   BoxContainer,
@@ -13,6 +14,9 @@ import { AccountContext } from "./accountContext";
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
 
+  const navigate = useNavigate();
+  const signup = useCallback(() => navigate('/signup_details', {replace: true}), [navigate]);
+
   return (
     <BoxContainer>
       <FormContainer>
@@ -22,7 +26,7 @@ export function SignupForm(props) {
         <Input type="password" placeholder="Confirm Password" />
       </FormContainer>
       <Marginer direction="vertical" margin="1em" />
-      <SubmitButton type="submit">Signup</SubmitButton>
+      <SubmitButton type="submit" onClick={signup}>Signup</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
         Already have an account?

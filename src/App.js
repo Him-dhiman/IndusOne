@@ -8,6 +8,7 @@ import Navbar from "./front-end/common_components/Navbar/Navbar";
 import Footer from "./front-end/common_components/Footer/Footer";
 import LandingPage from "./front-end/before-login/pages/LandingPage";
 import SignInAndSignUp from "./front-end/before-login/pages/login-register/design";
+import SignupDetails from "./front-end/before-login/pages/login-register/accountBox/signupDetails"
 import IMS from "./front-end/before-login/pages/IMS";
 import AIConnect from "./front-end/before-login/pages/AI_Connect";
 import FAQs from "./front-end/common_components/faqs/FAQs";
@@ -53,6 +54,17 @@ function App() {
                 <Navbar />
                 <SignInAndSignUp />
                 <Footer />
+              </>
+            }
+          />
+          {/*------------------------------------------------------- */}
+          <Route
+            path="/signup_details"
+            element={
+              <>
+                <Navbar />
+                <SignupDetails />
+                {/* <Footer /> */}
               </>
             }
           />
