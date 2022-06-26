@@ -2,7 +2,7 @@ import React from "react";
 import "../css/Footer.css";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
-import { MDBIcon } from 'mdb-react-ui-kit';
+// import { MDBIcon } from 'mdb-react-ui-kit';
 function Footer() {
   return (
     <>
@@ -10,7 +10,7 @@ function Footer() {
       <div className="footer-container">
         <section className="footer-subscription">
           <p className="footer-subscription-heading">
-            Join the Tech IndusOne newsletter for latest updates &nbsp;<MDBIcon fas icon="bullhorn" />
+            Join the Tech IndusOne newsletter for latest updates &nbsp;
           </p>
           <p className="footer-subscription-text">
             You can unsubscribe at any time.
