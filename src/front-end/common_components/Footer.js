@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Footer.css";
+import "../common_css/Footer.css";
 import { Button } from "../before-login/components/Button";
 import { Link } from "react-router-dom";
 import { MDBIcon } from 'mdb-react-ui-kit';

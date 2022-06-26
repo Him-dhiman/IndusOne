@@ -2,7 +2,7 @@
 import React from "react";
 import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 import Carousel from "../components/Carousel";
-import CardItem_2 from "../../components/MDB_Cards_2";
+import CardItem_2 from "../../common_components/MDB_Cards_2";
 
 function AIConnect() {
   return (
@@ -16,7 +16,7 @@ function AIConnect() {
           <MDBCol sm="4">
             <img
               style={{ height: 415, width: 415 }}
-              src={"images/h-images/AI_Connect.png"}
+              src="images/h-images/AI_Connect.png"
               alt=""
             />
           </MDBCol>

@@ -19,7 +19,7 @@ function Cards() {
               src="images/img-2.jpg"
               text="Foster collaborations between AI and Machine Learning experts across the globe."
               label="AI Connect"
-              path="/AI_Connect"
+              path="/AIConnect"
             />
             <CardItem
               src="images/img-3.jpg"
