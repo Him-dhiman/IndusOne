@@ -3,7 +3,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Cards from './Components/common/certify/Cards.js'
+import Cards from './components/common/certify/Cards.js'
 
 import Header from "./components/common/heading/Header"
 import React, {useState} from "react";
@@ -22,7 +22,7 @@ import ScrollToTop from './Utils/ScrollToTop'
 const App = () => {
   const [question, setQuestion] = useState("");
   const [submission, setSubmission] = useState(``);
-  console.log(submission)
+  
 
   return (
     <>
