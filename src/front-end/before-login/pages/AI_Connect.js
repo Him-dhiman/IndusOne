@@ -3,10 +3,10 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBBtn
 import Carousel from '../components/Carousel';
 import CardItem from '../components/MDB_Cards';
 import CardItem_2 from '../components/MDB_Cards_2';
-import image from '../h-images/AI_Connect.png';
-import image1 from '../h-images/AI-1.jpg';
-import image2 from '../h-images/AI-2.jpg';
-import image3 from '../h-images/AI-3.jpg';
+// import image from '../h-images/AI_Connect.png';
+// import image1 from '../h-images/AI-1.jpg';
+// import image2 from '../h-images/AI-2.jpg';
+// import image3 from '../h-images/AI-3.jpg';
 function AI_Connect() {
   return (
       <>
@@ -18,22 +18,22 @@ function AI_Connect() {
       <MDBRow style={{padding :50}}>
 
         <MDBCol sm='3'><CardItem_2
-        src="images/img-1.jpg"
+        // src="images/img-1.jpg"
         title="Learning content from more than 1000 companies in the form of challenges."
         content="Learn"
         /> </MDBCol>
         <MDBCol sm='3'><CardItem_2
-          src={image1}
+          // src={image1}
           title="Learning content from more than 1000 companies in the form of challenges."
           content="Learn"
         /> </MDBCol>
         <MDBCol sm='3'><CardItem_2
-        src={image2}
+        // src={image2}
         title="Learning content from more than 1000 companies in the form of challenges."
         content="Learn"
         /> </MDBCol>
         <MDBCol sm='3'><CardItem_2
-        src={image3}
+        // src={image3}
         title="Learning content from more than 1000 companies in the form of challenges."
         content="Learn"
         /> </MDBCol>
