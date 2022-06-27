@@ -7,14 +7,11 @@ import Axios from 'axios';
 import spinner from './images/spinner.png';
 import Select from 'react-select';
 import { Nav, Navbar } from 'react-bootstrap';
+
 /*import { Link } from "react-router-dom"*/
 
-export let solno=0
-    function submit(){
-        solno++;
-    } 
-function Ide({question}) {
-    console.log(question);
+
+function Ide({ setSubmission, question }) {
     const [userCode, setUserCode] = useState(``);
     const [userLang, setUserLang] = useState("python");
     const [userTheme, setUserTheme] = useState("vs-dark");
@@ -48,7 +45,11 @@ function Ide({question}) {
     function clearOutput() {
         setUserOutput("");
     }
-    
+    let solno = 0
+    function submit() {
+        solno++;
+        setSubmission(userCode)
+    }
 
     const languages = [
         { value: "c", label: "C" },
@@ -60,12 +61,13 @@ function Ide({question}) {
         { value: "vs-dark", label: "Dark" },
         { value: "light", label: "Light" },
     ]
+
     return (
         <><h2 className="quest my-3">{question.title}</h2>
 
-        <div className="question-content">
-            {question.description}
-        </div>
+            <div className="question-content">
+                {question.description}
+            </div>
 
 
             <div className="Ide ">
@@ -108,12 +110,13 @@ function Ide({question}) {
                             defaultLanguage="python"
                             defaultValue="# Enter your code here"
                             onChange={(value) => { setUserCode(value) }}
-                            
+
                         />
-                        <button className="run-btn" onClick={() => compile()}>
+
+                        <button className="run-btn" onClick={compile}>
                             <li>Run</li>
                         </button>
-                        <button className="sub-btn" onClick={() => submit()}> <li>Submit</li></button>
+                        <button className="sub-btn" onClick={submit}> <li>Submit</li></button>
 
                     </div>
                     <div className="right-container">
