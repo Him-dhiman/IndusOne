@@ -11,6 +11,7 @@ function AI_Connect() {
   return (
       <>
       <div style={{padding :50}}>
+      <h1> Hi, this is AI Connect </h1>
       <MDBRow style={{}}>
       <MDBCol sm='8'>  <Carousel /></MDBCol>
       <MDBCol sm='4'><img style={{height: 415, width: 415}} /></MDBCol>
