@@ -13,7 +13,7 @@ function AI_Connect() {
       <div style={{padding :50}}>
       <MDBRow style={{}}>
       <MDBCol sm='8'>  <Carousel /></MDBCol>
-      <MDBCol sm='4'><img style={{height: 415, width: 415}} src={image} /></MDBCol>
+      <MDBCol sm='4'><img style={{height: 415, width: 415}} /></MDBCol>
     </MDBRow>
       <MDBRow style={{padding :50}}>
 
