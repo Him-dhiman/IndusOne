@@ -1,13 +1,14 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button'
 import './FAQ.css';
+import { Link } from "react-router-dom"
 
 function FAQ() {
     return (
         <>
             <h1 className="faq">Frequently Asked Questions</h1>
             <div className='container flexSB'>
-                <div className='left-row'><Button variant="warning">Ask A Question</Button></div>
+                <div className='left-row'><Link to="/FAQ/askquestion"><Button variant="warning">Ask A Question</Button></Link></div>
                 <div><form className="d-flex" role="search">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                 </form></div>

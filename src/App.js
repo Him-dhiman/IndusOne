@@ -13,10 +13,11 @@ import Footer from './components/common/footer/Footer'
 import Prepare from './components/Prepare/Prepare.js'
 import Compete from './components/Compete/Compete.js'
 import SavedQuestions from './components/Saved/SavedProblems.js'
-import Ide from './components/common/ide/Ide.js';
+import Ide from './components/common/ide/Ide';
 import Submissions from './components/common/ide/Submissions';
 import FAQ from './components/FAQ/FAQ';
 import ScrollToTop from './Utils/ScrollToTop'
+
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
         <Route exact path="/FAQ" element={<FAQ/>}/>
         <Route exact path="/saved-questions" element={<SavedQuestions/>} />
         <Route exact path="/submissions" element={<Submissions submission={submission} />} />
+        
         </Routes >
         <Footer/>
       </Router>

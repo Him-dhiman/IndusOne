@@ -31,13 +31,15 @@ function Ide({ setSubmission, question }) {
         }
 
 
-        Axios.post(`http://localhost:8000/compile`, {
+        Axios.post(`http://localhost:8000/Ide`, {
             code: userCode,
             language: userLang,
             input: userInput
-        }).then((res) => {
+        })
+        .then((res) => {
             setUserOutput(res.data.output);
-        }).then(() => {
+        })
+        .then(() => {
             setLoading(false);
         })
     }
@@ -113,7 +115,7 @@ function Ide({ setSubmission, question }) {
 
                         />
 
-                        <button className="run-btn" onClick={compile}>
+                        <button className="run-btn" onClick={()=>compile()}>
                             <li>Run</li>
                         </button>
                         <button className="sub-btn" onClick={submit}> <li>Submit</li></button>
