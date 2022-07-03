@@ -38,15 +38,15 @@ function Cards() {
             />
             <CardItem
               src="images/img-5.jpg"
-              text="Learn More"
-              label="More"
+              text="Artificial Intelligence Solutions for complex everyday problems"
+              label="Projects"
               path="/More"
             />
             <CardItem
               src="images/img-6.jpg"
               text="Some of the frequently asked queestions and answers"
               label="FAQs"
-              path="/faqs"
+              path="/FAQ"
             />
           </ul>
         </div>

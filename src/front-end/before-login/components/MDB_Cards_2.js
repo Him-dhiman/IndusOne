@@ -5,7 +5,7 @@ export default function App(props) {
   return (
     <MDBCard style={{ maxWidth: '22rem' }}>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-        <MDBCardImage src={props.src} style={{height:150, width:250}} fluid alt='...' />
+        <MDBCardImage src={props.src} fluid alt='...' />
         <a>
           <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
         </a>

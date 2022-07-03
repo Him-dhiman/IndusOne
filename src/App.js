@@ -11,11 +11,10 @@ import SignInAndSignUp from "./front-end/before-login/pages/login-register/desig
 import SignupDetails from "./front-end/before-login/pages/login-register/accountBox/signupDetails"
 import IMS from "./front-end/before-login/pages/IMS";
 import AIConnect from "./front-end/before-login/pages/AI_Connect";
-import FAQs from "./front-end/common_components/faqs/FAQs";
 import Learn from "./front-end/before-login/pages/Learn";
 import More from "./front-end/before-login/pages/More";
 import UI from "./front-end/before-login/pages/Technologies";
-
+import FAQ_S from "./front-end/before-login/pages/FAQ";
 import Cards from "./front-end/after-login/Components/common/certify/Cards.js";
 import Header from "./front-end/after-login/Components/common/heading/Header";
 import FooterX from "./front-end/after-login/Components/common/footer/Footer";
@@ -27,7 +26,7 @@ import Ide from "./front-end/after-login/Components/common/ide/Ide.js";
 import Submissions from "./front-end/after-login/Components/common/ide/Submissions";
 import FAQ from "./front-end/after-login/Components/FAQ/FAQ";
 import ScrollToTop from "./front-end/after-login/Utils/ScrollToTop";
- 
+
 function App() {
   const [question, setQuestion] = useState("");
 
@@ -79,13 +78,13 @@ function App() {
               </>
             }
           />
-          {/*------------------------------------------------------- */}
+    {/*------------------------------------------------------- */}
           <Route
-            path="/faqs"
+            path="/FAQ"
             element={
               <>
                 <Navbar />
-                <FAQs />
+                <FAQ_S />
                 <Footer />
               </>
             }
@@ -186,19 +185,7 @@ function App() {
               </>
             }
           />
-          {/*------------------------------------------------------- */}
-          <Route
-            exact
-            path="/FAQ"
-            element={
-              <>
-                <Header />
-                <ScrollToTop />
-                <FAQ />
-                <FooterX />
-              </>
-            }
-          />
+
           {/*------------------------------------------------------- */}
           <Route
             exact
