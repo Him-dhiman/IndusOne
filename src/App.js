@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -81,9 +82,9 @@ function App() {
               </>
             }
           />
-          {/*------------------------------------------------------- */}
+    {/*------------------------------------------------------- */}
           <Route
-            path="/faqs"
+            path="/FAQ"
             element={
               <>
                 <Navbar />
@@ -199,19 +200,7 @@ function App() {
               </>
             }
           />
-          {/*------------------------------------------------------- */}
-          <Route
-            exact
-            path="/FAQ"
-            element={
-              <>
-                <Header />
-                <ScrollToTop />
-                <FAQ />
-                <FooterX />
-              </>
-            }
-          />
+
           {/*------------------------------------------------------- */}
           <Route
             exact

@@ -46,7 +46,7 @@ function Cards() {
               src="images/img-6.jpg"
               text="Some of the frequently asked queestions and answers"
               label="FAQs"
-              path="/faqs"
+              path="/FAQ"
             />
           </ul>
         </div>

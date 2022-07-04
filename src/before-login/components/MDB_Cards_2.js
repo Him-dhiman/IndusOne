@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, MDBRipple } from 'mdb-react-ui-kit';
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBRipple } from 'mdb-react-ui-kit';
 
 export default function App(props) {
   return (
@@ -16,7 +16,6 @@ export default function App(props) {
         <MDBCardText>
         {props.content}
         </MDBCardText>
-        <MDBBtn href='#'>Button</MDBBtn>
       </MDBCardBody>
     </MDBCard>
   );
