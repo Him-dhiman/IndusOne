@@ -1,6 +1,5 @@
 import React from 'react';
 import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
-import background from '../../../h-images/AI-1.png';
 export default function App() {
 
   return (
