@@ -38,9 +38,9 @@ function Cards() {
             />
             <CardItem
               src="images/img-5.jpg"
-              text="Learn More"
-              label="More"
-              path="/More"
+              text="Forum for discussions and asking questions"
+              label="Forum"
+              path="/forum"
             />
             <CardItem
               src="images/img-6.jpg"

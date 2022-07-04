@@ -4,29 +4,31 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
 import "./App.css";
-import Navbar from "./front-end/common_components/Navbar/Navbar";
-import Footer from "./front-end/common_components/Footer/Footer";
-import LandingPage from "./front-end/before-login/pages/LandingPage";
-import SignInAndSignUp from "./front-end/before-login/pages/login-register/design";
-import SignupDetails from "./front-end/before-login/pages/login-register/accountBox/signupDetails"
-import IMS from "./front-end/before-login/pages/IMS";
-import AIConnect from "./front-end/before-login/pages/AI_Connect";
-import FAQs from "./front-end/common_components/faqs/FAQs";
-import Learn from "./front-end/before-login/pages/Learn";
-import More from "./front-end/before-login/pages/More";
-import UI from "./front-end/before-login/pages/Technologies";
+import Navbar from "./common_components/Navbar/Navbar";
+import Footer from "./common_components/Footer/Footer";
+import LandingPage from "./before-login/pages/LandingPage";
+import SignInAndSignUp from "./before-login/pages/login-register/design";
+import SignupDetails from "./before-login/pages/login-register/accountBox/signupDetails";
+import IMS from "./before-login/pages/IMS";
+import AIConnect from "./before-login/pages/AI_Connect";
+import FAQs from "./common_components/faqs/FAQs";
+import Learn from "./before-login/pages/Learn";
+import More from "./before-login/pages/More";
+import UI from "./before-login/pages/Technologies";
 
-import Cards from "./front-end/after-login/Components/common/certify/Cards.js";
-import Header from "./front-end/after-login/Components/common/heading/Header";
-import FooterX from "./front-end/after-login/Components/common/footer/Footer";
+import Cards from "./after-login/Components/common/certify/Cards.js";
+import Header from "./after-login/Components/common/heading/Header";
+import FooterX from "./after-login/Components/common/footer/Footer";
 
-import Prepare from "./front-end/after-login/Components/Prepare/Prepare.js";
-import Compete from "./front-end/after-login/Components/Compete/Compete.js";
-import SavedQuestions from "./front-end/after-login/Components/Saved/SavedProblems.js";
-import Ide from "./front-end/after-login/Components/common/ide/Ide.js";
-import Submissions from "./front-end/after-login/Components/common/ide/Submissions";
-import FAQ from "./front-end/after-login/Components/FAQ/FAQ";
-import ScrollToTop from "./front-end/after-login/Utils/ScrollToTop";
+import Prepare from "./after-login/Components/Prepare/Prepare.js";
+import Compete from "./after-login/Components/Compete/Compete.js";
+import SavedQuestions from "./after-login/Components/Saved/SavedProblems.js";
+import Ide from "./after-login/Components/common/ide/Ide.js";
+import Submissions from "./after-login/Components/common/ide/Submissions";
+import FAQ from "./after-login/Components/FAQ/FAQ";
+import ScrollToTop from "./after-login/Utils/ScrollToTop";
+
+import Forum from "./after-login/Components/forum/components/Home/Home";
 
 function App() {
   const [question, setQuestion] = useState("");
@@ -144,6 +146,17 @@ function App() {
                 <ScrollToTop />
                 <Prepare setQuestion={setQuestion} />
                 <FooterX />
+              </>
+            }
+          />
+          {/*------------------------------------------------------- */}
+          <Route
+            path="/forum"
+            element={
+              <>
+                {/* <Navbar /> */}
+                <Forum />
+                <Footer />
               </>
             }
           />
