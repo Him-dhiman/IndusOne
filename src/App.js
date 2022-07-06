@@ -18,7 +18,7 @@ import FAQ_S from "./front-end/before-login/pages/FAQ";
 import Cards from "./front-end/after-login/Components/common/certify/Cards.js";
 import Header from "./front-end/after-login/Components/common/heading/Header";
 import FooterX from "./front-end/after-login/Components/common/footer/Footer";
-
+import {TimeoutLogic} from "./front-end/common_components/SessionTimeOut/session_timeout";
 import Prepare from "./front-end/after-login/Components/Prepare/Prepare.js";
 import Compete from "./front-end/after-login/Components/Compete/Compete.js";
 import SavedQuestions from "./front-end/after-login/Components/Saved/SavedProblems.js";
@@ -214,6 +214,7 @@ function App() {
           />
         </Routes>
       </Router>
+       <TimeoutLogic/>
     </>
   );
 }
