@@ -8,13 +8,11 @@ import Cards from './components/common/certify/Cards.js'
 import Header from "./components/common/heading/Header"
 import React, {useState} from "react";
 import Footer from './components/common/footer/Footer'
-
-
 import Prepare from './components/Prepare/Prepare.js'
 import Compete from './components/Compete/Compete.js'
 import SavedQuestions from './components/Saved/SavedProblems.js'
 import Ide from './components/common/ide/Ide';
-import Submissions from './components/common/ide/Submissions';
+import Submissions from './components/common/ide/Submissions/Submissions';
 import FAQ from './components/FAQ/FAQ';
 import ScrollToTop from './Utils/ScrollToTop'
 
@@ -32,12 +30,13 @@ const App = () => {
         <ScrollToTop />
         <Routes>
         <Route exact path="/" element={<Prepare setQuestion={setQuestion}/>} /> 
-        <Route exact path='/certify' element={<Cards/>} />  
-        <Route exact path='/Ide' element={<Ide setSubmission={setSubmission} question={question}/>}/>
+        <Route exact path='/certify' element={<Cards/>} />
+        <Route exact path='/Ide' element={<Ide question={question} setSubmission={setSubmission}/>}/>
+        
         <Route exact path="/compete" element={<Compete/> } />     
         <Route exact path="/FAQ" element={<FAQ/>}/>
         <Route exact path="/saved-questions" element={<SavedQuestions/>} />
-        <Route exact path="/submissions" element={<Submissions submission={submission} />} />
+        <Route exact path="/submissions" element={<Submissions code={submission} />}/>
         
         </Routes >
         <Footer/>

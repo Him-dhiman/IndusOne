@@ -1,64 +1,148 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import './ide.css';
-import Editor from "@monaco-editor/react";
-/*import Navbar from "./Navbar";*/
 import Container from 'react-bootstrap/Container';
-import Axios from 'axios';
-import spinner from './images/spinner.png';
+import axios from 'axios';
+import CodeEditorWindow from "./CodeEditorWindow";
 import Select from 'react-select';
 import { Nav, Navbar } from 'react-bootstrap';
-
+import { languageOptions } from "../../editor/constants/languageOptions";
+import "react-toastify/dist/ReactToastify.css";
+import { Buffer } from 'buffer';
+import CustomInput from "./CustomInput";
+import LanguagesDropdown from "./LanguagesDropdown";
+import useKeyPress from "./hooks/useKeyPress";
+import OutputWindow from "./OutputWindow";
+import Submissions from "./Submissions/Submissions";
 /*import { Link } from "react-router-dom"*/
+const encodeBase64 = (data) => {
+    return Buffer.from(data).toString('base64');
+}
 
+const javascriptDefault = ``;
 
 function Ide({ setSubmission, question }) {
-    const [userCode, setUserCode] = useState(``);
-    const [userLang, setUserLang] = useState("python");
+    const [code, setCode] = useState(javascriptDefault);
+    const [language, setLanguage] = useState(languageOptions[0]);
     const [userTheme, setUserTheme] = useState("vs-dark");
     const [fontSize, setFontSize] = useState(20);
-
-    const [userInput, setUserInput] = useState("");
-    const [userOutput, setUserOutput] = useState("");
-    const [loading, setLoading] = useState(false);
+    const [customInput, setCustomInput] = useState("");
+    const [outputDetails, setOutputDetails] = useState(null);
+    const [processing, setProcessing] = useState(null);
     const options = {
         fontSize: fontSize
     }
+    const enterPress = useKeyPress("Enter");
+    const ctrlPress = useKeyPress("Control");
 
-    function compile() {
-        setLoading(true);
-        if (userCode === ``) {
-            return
+    const onSelectChange = (sl) => {
+        console.log("selected Option...", sl);
+        setLanguage(sl);
+    };
+    
+    useEffect(() => {
+        if (enterPress && ctrlPress) {
+            console.log("enterPress", enterPress);
+            console.log("ctrlPress", ctrlPress);
+            handleCompile();
         }
+    }, [ctrlPress, enterPress]);
+
+    const onChange = (action, data) => {
+        switch (action) {
+            case "code": {
+                setCode(data);
+                break;
+            }
+            default: {
+                console.warn("case not handled!", action, data);
+            }
+        }
+    };
+    
+    const handleCompile = () => {
+        setProcessing(true);
+        const formData = {
+            language_id: language.id,
+            // encode source code in base64
+            source_code: encodeBase64(code),
+            stdin: encodeBase64(customInput),
+        };
+        const options = {
+            method: "POST",
+            url: 'https://judge0-ce.p.rapidapi.com/submissions',
+            params: { base64_encoded: "true", fields: "*" },
+            headers: {
+                "content-type": "application/json",
+                "Content-Type": "application/json",
+                "X-RapidAPI-Host": 'judge0-ce.p.rapidapi.com',
+                "X-RapidAPI-Key": '9b212b9d8cmsh1009d31850cf944p136781jsnd82903ce32f1',
+            },
+            data: formData,
+        };
+
+        axios
+            .request(options)
+            .then(function (response) {
+                console.log("res.data", response.data);
+                const token = response.data.token;
+                checkStatus(token);
+            })
+            .catch((err) => {
+                let error = err.response ? err.response.data : err;
+                // get error status
+                let status = err.response.status;
+                console.log("status", status);
+                if (status === 429) {
+                    console.log("too many requests", status);
 
 
-        Axios.post(`http://localhost:8000/Ide`, {
-            code: userCode,
-            language: userLang,
-            input: userInput
-        })
-        .then((res) => {
-            setUserOutput(res.data.output);
-        })
-        .then(() => {
-            setLoading(false);
-        })
-    }
+                }
+                setProcessing(false);
+                console.log("catch block...", error);
+            });
+    };
+
+    const checkStatus = async (token) => {
+        const options = {
+            method: "GET",
+            url: 'https://judge0-ce.p.rapidapi.com/submissions' + "/" + token,
+            params: { base64_encoded: "true", fields: "*" },
+            headers: {
+                "X-RapidAPI-Host": 'judge0-ce.p.rapidapi.com',
+                "X-RapidAPI-Key": '9b212b9d8cmsh1009d31850cf944p136781jsnd82903ce32f1',
+            },
+        };
+        try {
+            let response = await axios.request(options);
+            let statusId = response.data.status?.id;
+
+            // Processed - we have a result
+            if (statusId === 1 || statusId === 2) {
+                // still processing
+                setTimeout(() => {
+                    checkStatus(token);
+                }, 2000);
+                return;
+            } else {
+                setProcessing(false);
+                setOutputDetails(response.data);
+                console.log("response.data", response.data);
+                return;
+            }
+        } catch (err) {
+            console.log("err", err);
+            setProcessing(false);
+
+        }
+    };
 
     function clearOutput() {
-        setUserOutput("");
+        setOutputDetails("");
     }
-    let solno = 0
-    function submit() {
-        solno++;
-        setSubmission(userCode)
+    
+    const submit=()=> {
+        setSubmission(code)
     }
-
-    const languages = [
-        { value: "c", label: "C" },
-        { value: "cpp", label: "C++" },
-        { value: "python", label: "Python" },
-        { value: "java", label: "Java" },
-    ];
     const themes = [
         { value: "vs-dark", label: "Dark" },
         { value: "light", label: "Light" },
@@ -75,14 +159,13 @@ function Ide({ setSubmission, question }) {
             <div className="Ide ">
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Container>
-
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="me-auto">
                                 <div className="drops">
-                                    <Select options={languages} value={userLang}
-                                        onChange={(e) => setUserLang(e.value)}
-                                        placeholder={userLang} />
+                                    <div>
+                                        <LanguagesDropdown onSelectChange={onSelectChange} />
+                                    </div>
                                     <Select options={themes} value={userTheme}
                                         onChange={(e) => setUserTheme(e.value)}
                                         placeholder={userTheme} />
@@ -103,45 +186,39 @@ function Ide({ setSubmission, question }) {
 
                 <div className="main">
                     <div className="left-container">
-                        <Editor
-                            options={options}
-                            height="calc(100vh - 50px)"
-                            width="100%"
+                        <CodeEditorWindow
+                            id="editor-form"
+                            code={code}
+                            onChange={onChange}
+                            language={language?.value}
                             theme={userTheme}
-                            language={userLang}
-                            defaultLanguage="python"
-                            defaultValue="# Enter your code here"
-                            onChange={(value) => { setUserCode(value) }}
-
+                            options={options}
                         />
 
-                        <button className="run-btn" onClick={()=>compile()}>
-                            <li>Run</li>
+                        <button className="run-btn" onClick={handleCompile} disabled={!code} >
+                            <li>{processing ? "Running..." : "Run"}</li>
                         </button>
-                        <button className="sub-btn" onClick={submit}> <li>Submit</li></button>
+                        <button className="sub-btn" id="submit" onClick={submit}> <li>Submit</li></button>
 
                     </div>
                     <div className="right-container">
                         <h4>Input:</h4>
                         <div className="input-box">
-                            <textarea id="code-inp" onChange=
-                                {(e) => setUserInput(e.target.value)}>
-                            </textarea>
+                            <CustomInput
+                                customInput={customInput}
+                                setCustomInput={setCustomInput}
+                            />
                         </div>
                         <h4>Output:</h4>
-                        {loading ? (
-                            <div className="spinner-box">
-                                <img src={spinner} alt="Loading..." />
-                            </div>
-                        ) : (
-                            <div className="output-box">
-                                <pre>{userOutput}</pre>
-                                <button onClick={() => { clearOutput() }}
-                                    className="clear-btn">
-                                    <li>Clear</li>
-                                </button>
-                            </div>
-                        )}
+                        <div className="output-box">
+                            <OutputWindow outputDetails={outputDetails} />
+                            <button onClick={() => { clearOutput() }}
+                                className="clear-btn">
+                                <li>Clear</li>
+                            </button>
+                            
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -150,3 +227,7 @@ function Ide({ setSubmission, question }) {
 }
 
 export default Ide
+
+
+
+
