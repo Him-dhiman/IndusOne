@@ -75,7 +75,7 @@ function Ide({ setSubmission, question }) {
                 "content-type": "application/json",
                 "Content-Type": "application/json",
                 "X-RapidAPI-Host": 'judge0-ce.p.rapidapi.com',
-                "X-RapidAPI-Key": '9b212b9d8cmsh1009d31850cf944p136781jsnd82903ce32f1',
+                "X-RapidAPI-Key": '',
             },
             data: formData,
         };
@@ -109,7 +109,7 @@ function Ide({ setSubmission, question }) {
             params: { base64_encoded: "true", fields: "*" },
             headers: {
                 "X-RapidAPI-Host": 'judge0-ce.p.rapidapi.com',
-                "X-RapidAPI-Key": '9b212b9d8cmsh1009d31850cf944p136781jsnd82903ce32f1',
+                "X-RapidAPI-Key": '',
             },
         };
         try {
